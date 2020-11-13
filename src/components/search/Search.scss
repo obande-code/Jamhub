@@ -1,0 +1,20 @@
+.search-section{
+    width: 90%;
+}
+
+.form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+    .job{
+        margin-right: 20px;
+        width: 300px;
+    }
+    .location{
+        width: 300px;
+    }
+    .fullTime{
+        margin: 25px 0 10px 20px;
+    }
+}
