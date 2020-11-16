@@ -1,19 +1,23 @@
 import React from 'react'
 import './Search.scss'
+import useFetchJobs from '../useFetchJobs'
+import { Container } from 'react-bootstrap'
+import JobBoard from '../jobBoard/JobBoard'
 
 const Search = () => {
+    const { jobs, loading, error} = useFetchJobs ()
     return (
-        <div className="search-section">
-            <form className="form">
-                <label for="job">Job Description <br/>
-                <input className="job" type="text" />
-                </label><br/>
-                <label for="location">Job Location<br/>
-                <input className="location" type="text" />
-                </label><br/>
-                <label for="full-time"> <input className= "fullTime" type="Checkbox" />Full Time Only</label>
-            </form>
-        </div>
+
+        <Container>
+           {loading && <h1>Loading...</h1>}
+           {error && <h1>Error. Try Refreshing.</h1>}
+           {
+               jobs.map( job =>(
+                   <JobBoard job={job}  key={job.id} />
+               ))
+           }
+        </Container>
+        
     )
 }
 
