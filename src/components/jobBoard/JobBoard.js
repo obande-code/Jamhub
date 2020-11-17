@@ -17,7 +17,7 @@ const JobBoard = ({ job }) => {
                        {new Date(job.created_at).toLocaleDateString()}
                    </Card.Subtitle>
                        <Badge variant="info" className="mr-2">{job.type} </Badge>
-                       <Badge variant="primary" className="clearfix">{job.location} </Badge>
+                       <Badge variant="primary" className="text-wrap">{job.location}</Badge>
                        <div>
                        <ReactMarkdown source={job.how_to_apply} />
                        </div>
