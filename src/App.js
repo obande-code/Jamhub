@@ -6,7 +6,7 @@ function App() {
   
   return (
     <div className="App">
-      < Navbar title= "Github Job Search"/>
+      < Navbar />
       <Search />
     </div>
   );

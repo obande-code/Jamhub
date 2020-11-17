@@ -1,14 +1,12 @@
 import React from 'react'
 import './Navbar.scss'
 
-const Navbar = ({ title}) => {
+const Navbar = () => {
 
     return (
         <div className="nav">
-           <i class="fab fa-github-alt fa-3x"></i> {title}
-           
+        <h6><i class="fab fa-github-alt fa-3x"></i> Github Job Search</h6> 
         </div>
     )
 }
-
 export default Navbar
